@@ -1,0 +1,28 @@
+  [{
+    "fname": "Ortal",
+    "lname": "Wanderman",
+    "score": 500,
+    "password":123123
+}, {
+    "fname": "Uri",
+    "lname": "Wanderman",
+    "score": 750,
+    "password":123123
+} ,{
+    "fname": "Eilon",
+    "lname": "Musk",
+    "score": 200,
+    "password":123123
+
+} ,{
+    "fname": "Orna",
+    "lname": "Datz",
+    "score": 900,
+    "password":123123
+
+} ,{
+    "fname": "Olga",
+    "lname": "Shmolka",
+    "score": 1500,
+    "password":123123
+}]
