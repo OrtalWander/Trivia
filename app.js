@@ -12,4 +12,7 @@ myApp.config (function($routeProvider){
     .when("/top5", {
         templateUrl: "app/views/top5.html"
     })
+    .when("/contactUs", {
+        templateUrl: "app/views/contactUs.html"
+    })
 });
