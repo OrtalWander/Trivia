@@ -1,0 +1,15 @@
+<body ng-controller="question">
+<h1>Game</h1>
+<div ng-repeat="question in questions">
+<h2>{{question}}</h2>
+</div>
+
+<form>
+    <input type="radio" value="True">
+    <label>True</label><br>
+    <input type="radio" value="False">
+    <label>False</label><br>
+    <br>
+    <button type="submit">Next</button>
+</form>
+</body>
