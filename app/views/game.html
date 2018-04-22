@@ -1,7 +1,10 @@
 <body ng-controller="questions">
 <div ng-repeat="question in questions">
-    <h1>Question:{{question.question}}</h1>
-    <h2>test: {{question.correct_answer}}</h2>
+    <h1 ng-bind-html="question.question"></h1>
+    <!-- <div ng-repeat="answer in question.answers">
+        <h2 ng-bind-html="answer"></h2>
+    </div> -->
+    <h2 ng-bind-html="question.answers"></h2>
 </div>
 
 <!-- <form>
