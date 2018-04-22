@@ -1,9 +1,9 @@
-app.factory("usersService", function ($http, $log, $q) {
+myApp.factory("usersService", function ($http, $q) {
     function User(plainUser) {
         this.fname = plainUser.fname;
         this.lname = plainUser.lname;
         this.password = plainUser.password;
-
+        this.score = plainUser.score;
     }
     var users = [];
 
@@ -28,10 +28,9 @@ app.factory("usersService", function ($http, $log, $q) {
     
     }
   return {
-        load: load
-        // login: login,
-        // getUser: getUser,
-        // isLoggedIn: isLoggedIn,
-        // logout: logout
+        load: load,
+        users: users
+       
     }
+
 });

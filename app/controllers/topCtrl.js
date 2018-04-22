@@ -1,5 +1,6 @@
-myApp.controller('top5Ctrl',function($scope,usersService){
-
-    //  $scope.users=usersService.load(.)
-
+myApp.controller('topCtrl',function($scope,usersService){
+    
+    usersService.load().then(function(){
+        $scope.users=usersService.users;
+    });
 });
