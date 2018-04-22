@@ -20,6 +20,7 @@ myApp.config (function($routeProvider){
         templateUrl: "app/views/signup.html"
     })
     .when("/game", {
-        templateUrl: "app/views/game.html"
+        templateUrl: "app/views/game.html",
+        controller: "questions"
     })
 });
