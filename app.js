@@ -10,7 +10,7 @@ myApp.config (function($routeProvider){
         templateUrl: "app/views/login.html"
     })
     .when("/top5", {
-        templateUrl: "app/views/top5.html",
+        templateUrl: "app/views/top5.html"
         // controller: "topCtrl"
     })
     .when("/contact", {
