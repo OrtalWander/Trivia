@@ -1,6 +1,8 @@
 <h1 ng-bind-html="questions[0].question"></h1>
 <ul ng-repeat="answer in questions[0].answers">
-    <input type="radio" ng-model="userAns" ng-click="validation(userAns)" value=""> {{answer}}</li>
+    <li ng-click="validation(answer, questions[0].correct_answer)">
+        {{answer}}
+    </li>
 
 </ul>
 <div>
