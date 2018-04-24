@@ -1,12 +1,12 @@
-<h1 ng-bind-html="questions[0].question"></h1>
-<ul ng-repeat="answer in questions[0].answers">
-    <li ng-click="validation(answer, questions[0].correct_answer)">
+<div>
+<h1 ng-bind-html="questions[currentQuestion].question"></h1>
+<ul ng-repeat="answer in questions[currentQuestion].answers">
+    <li id="list" ng-click="selectAnswer(answer, questions[currentQuestion].correct_answer)" ng-class="{'incorrect': selectedAnswer === answer && selectedAnswer !== correctAnswer, 'correct': selectedAnswer === answer && selectedAnswer === correctAnswer}">
         {{answer}}
     </li>
-
 </ul>
 <div>
-        <button ng-click="myFunc()">OK</button>
+<button id="nextQ" ng-click="nextPage()">next question</button>
       </div>
 </div>
-<!-- <button id="buttonnext" type="text">next</button> -->
+</div>

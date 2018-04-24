@@ -1,5 +1,6 @@
-myApp.controller('questions', function ($scope, questionservice) {
+myApp.controller('questions', function ($scope, $routeParams, $location, questionservice) {
     $scope.questions = [];
+    $scope.currentQuestion = $routeParams.id;
     questionservice.load().then(function () {
         $scope.questions = questionservice.questions;
     })
@@ -7,16 +8,15 @@ myApp.controller('questions', function ($scope, questionservice) {
     $scope.myFunc = function () {
         $scope.count++;
     };
-    //   step 1: save user's answer
-    $scope.validation = function(userAnswer, correctAnswer) {
-        if(userAnswer === correctAnswer){
-            alert ("Correct");
-        }
-        
+
+    $scope.selectAnswer = function (answer, correctAnswer) {
+        $scope.selectedAnswer = null;
+        $scope.selectedAnswer = answer;
+        $scope.correctAnswer = correctAnswer;
     }
 
-
-    // in not correct- red frame and green on the correct answer
-
-    // count the correct answer
+$scope.nextPage=function (){
+    $location.path('/game/' + $scope.currentQuestion++);
+}
+    
 });
