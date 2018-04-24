@@ -1,8 +1,7 @@
 myApp.factory("questionservice", function ($http, $q) {
     function Question (questionsData) {
         this.question = questionsData.question;
-        this.answers = questionsData.correct_answer + ',' + questionsData.incorrect_answers;
-        this.answers = shuffle(this.answers);
+        this.answers = shuffle(questionsData.incorrect_answers.concat(questionsData.correct_answer));
         this.correct_answer = questionsData.correct_answer;
         this.incorrect_answers = questionsData.incorrect_answers;
     }

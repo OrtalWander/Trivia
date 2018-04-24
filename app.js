@@ -19,7 +19,7 @@ myApp.config (function($routeProvider){
     .when("/signup", {
         templateUrl: "app/views/signup.html"
     })
-    .when("/game", {
+    .when("/game/:id", {
         templateUrl: "app/views/game.html",
         controller: "questions"
     })
